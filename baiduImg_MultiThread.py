@@ -27,8 +27,7 @@ def request(searchword):
             global page
             conn = http.client.HTTPConnection('image.baidu.com')  
             request_url ='/search/avatarjson?tn=resultjsonavatarnew&ie=utf-8&word='+quote(searchword)+'&cg=girl&rn=60&pn='+str(page)
-            headers = {'User-Agent' :'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0','Content-type': 'test/html'}  
-            #body = urllib.urlencode({'tn':'resultjsonavatarnew','ie':'utf-8','word':'%E7%BE%8E%E5%A5%B3','cg':'girl','pn':self.page,'rn':'60'})  
+            headers = {'User-Agent' :'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0','Content-type': 'test/html'} 
             conn.request('GET',request_url,headers = headers)  
             r= conn.getresponse()  
             #print r.status
